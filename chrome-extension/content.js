@@ -18,6 +18,20 @@ function createAiButton() {
     return button;
 }
 
+function getEmailContent() {
+
+}
+
+function callBackEnd(btn) {
+    try{
+        btn.innerHTML = 'Generating...⌛';
+        btn.disabled = true;
+        const emailContent = getEmailContent();
+    } catch {
+        console.log("Error in callback")
+    }
+}
+
 function injectButton() {
     const existingButton = document.querySelector('.ai-reply-btn');
     if (existingButton) {
@@ -30,7 +44,7 @@ function injectButton() {
     const aiButton = createAiButton();
     aiButton.classList.add('ai-reply-btn');
     aiButton.addEventListener('click', async () => {
-        console.log('AI reply clicked');
+        callBackEnd(aiButton);
     });
     composeBar.insertBefore(aiButton, composeBar.firstChild);
 
