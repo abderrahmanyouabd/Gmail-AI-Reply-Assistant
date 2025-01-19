@@ -106,6 +106,7 @@ function createAiButtonWithDropdown() {
             buttonContainer.style.opacity = '0.5';
 
             const emailContent = getEmailContent();
+            // change the URL to the deployed server 'http://localhost:8080' same for manifest.json
             const response = await fetch(`http://localhost:8080/api/v1/mail/stream/generate-reply?mailContent=${encodeURIComponent(emailContent)}&tone=${encodeURIComponent(selectedTone.toUpperCase())}`, {
                 method: 'GET',
                 headers: {
