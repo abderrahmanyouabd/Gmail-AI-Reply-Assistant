@@ -1,12 +1,11 @@
 package com.a1st.gmailreplyassistant.controller;
 
+import com.a1st.gmailreplyassistant.domain.TONE;
 import com.a1st.gmailreplyassistant.request.MailRequest;
 import com.a1st.gmailreplyassistant.service.MailReplyService;
+import jakarta.websocket.server.PathParam;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 
 /**
@@ -16,13 +15,14 @@ import reactor.core.publisher.Flux;
 @RestController
 @RequestMapping("/api/v1/mail")
 @RequiredArgsConstructor
+@CrossOrigin
 public class MailReplyController {
 
     private final MailReplyService mailReplyService;
 
     @GetMapping("/stream/generate-reply")
-    public Flux<String> generateReply(@RequestBody MailRequest mailRequest) {
-        return mailReplyService.generateReply(mailRequest);
+    public Flux<String> generateReply(@RequestParam String mailContent, @RequestParam String tone) {
+        return mailReplyService.generateReply(new MailRequest(mailContent, TONE.valueOf(tone)));
     }
 
 
