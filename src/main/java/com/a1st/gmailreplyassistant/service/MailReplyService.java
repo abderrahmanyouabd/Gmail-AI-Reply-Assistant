@@ -21,6 +21,7 @@ public class MailReplyService {
     public Flux<String> generateReply(MailRequest mailRequest) {
         return chatClient
                 .prompt()
+                .system("You should always return only the requested email, no more, no less, and no further information.")
                 .user(buildPrompt(mailRequest))
                 .stream()
                 .content();
