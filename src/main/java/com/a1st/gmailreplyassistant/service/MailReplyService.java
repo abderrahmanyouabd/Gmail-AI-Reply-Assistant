@@ -21,9 +21,17 @@ public class MailReplyService {
     public Flux<String> generateReply(MailRequest mailRequest) {
         return chatClient
                 .prompt()
-                .system("")
-                .user(mailRequest.mailContent())
+                .user(buildPrompt(mailRequest))
                 .stream()
                 .content();
+    }
+
+    private String buildPrompt(MailRequest mailRequest) {
+        StringBuilder prompt = new StringBuilder();
+        prompt.append("You received an email with the following content: \n");
+        prompt.append(mailRequest.mailContent());
+        prompt.append("\nPlease reply to this email with the following tone: ");
+        prompt.append(mailRequest.tone().name()).append(" tone.");
+        return prompt.toString();
     }
 }
