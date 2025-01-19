@@ -1,10 +1,6 @@
-Here's the updated version of your README description with a section for the demo video and a note on where to place it:
-
----
-
 # AI Gmail Reply Assistant
 
-The **AI Gmail Reply Assistant** is a sophisticated tool that enhances the Gmail experience by automating email responses. It features a backend API powered by **Spring Boot** and integrates with the **Groq Cloud API** for AI-powered responses, while offering the flexibility to customize the solution to use local large language models (LLMs) like **Ollama Starter** or **Anthropic**, based on user preferences. The solution also includes a user-friendly **Chrome extension**.
+The **AI Gmail Reply Assistant** is a sophisticated tool that enhances the Gmail experience by automating email responses. It features a backend API powered by **Spring Boot** and integrates with the **Groq Cloud API** for AI-powered responses, while offering the flexibility to customize the solution to use local large language models (LLMs) like **Ollama Starter**, based on user preferences. The solution also includes a user-friendly **Chrome extension**.
 
 ### How It Works:
 1. **Chrome Extension**:
@@ -28,11 +24,9 @@ The **AI Gmail Reply Assistant** is a sophisticated tool that enhances the Gmail
 ### Demo Video:
 To see the **AI Gmail Reply Assistant** in action, check out the demo video below:
 
-<video width="600" controls>
-  <source src="/assets/demo.mp4" type="video/mp4">
-</video>
+![Demo Video](assets/demo.mp4)
 
 ### Technologies Used:
-- **Backend**: Spring Boot, Groq Cloud API (with support for Ollama Starter or Anthropic as local options)
+- **Backend**: Spring Boot, Groq Cloud API with ability to support Ollama Starter for local LLMs or other online models such as Anthropic
 - **Frontend**: Chrome Extension (Vanilla JavaScript, Native Browser APIs)
 - **Communication**: Server-Sent Events (SSE)
