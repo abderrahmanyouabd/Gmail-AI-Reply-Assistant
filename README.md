@@ -30,3 +30,6 @@ https://github.com/user-attachments/assets/7ecedd57-f8c1-4b54-b18c-90264e2f7769
 - **Backend**: Spring Boot, Groq Cloud API with ability to support Ollama Starter for local LLMs or other online models such as Anthropic
 - **Frontend**: Chrome Extension (Vanilla JavaScript, Native Browser APIs)
 - **Communication**: Server-Sent Events (SSE)
+
+### License:
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
