@@ -1,0 +1,10 @@
+chrome-extension/
+node_modules/
+Dockerfile
+docker-compose.yml
+README.md
+.git
+.gitignore
+.vscode/
+.idea/
+*.log.*

@@ -3,11 +3,11 @@ spring:
     name: gmail-reply-assistant-service
   ai:
     openai:
-      api-key: <GROQ_API_KEY>
+      api-key: ${GROQ_API_KEY}
       base-url: https://api.groq.com/openai
       chat:
         options:
-          model: llama-3.3-70b-versatile
+          model: ${MODEL_NAME}
           temperature: 0.7
 server:
   port: 8080
