@@ -24,7 +24,7 @@ The **AI Gmail Reply Assistant** is a sophisticated tool that enhances the Gmail
 ### Demo Video:
 To see the **AI Gmail Reply Assistant** in action, check out the demo video below:
 
-![Demo Video](assets/demo.mp4)
+https://github.com/user-attachments/assets/7ecedd57-f8c1-4b54-b18c-90264e2f7769
 
 ### Technologies Used:
 - **Backend**: Spring Boot, Groq Cloud API with ability to support Ollama Starter for local LLMs or other online models such as Anthropic
